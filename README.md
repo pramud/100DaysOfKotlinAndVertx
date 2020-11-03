@@ -1,4 +1,4 @@
-# 100DaysOfKotlinAndVertx
+# 100 Days Of Kotlin And Vertx
 
 # Day #1 - Setting up project
 
