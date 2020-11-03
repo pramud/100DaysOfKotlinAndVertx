@@ -11,7 +11,7 @@ running <b>gradle init</b> in command prompt </br> and seting the values as belo
 Adding vertx-core, vertx-web, vertx web api dependencies in build.gradle file 
 
 Creating a verticle 
- * Have to Extend AbstractVerticle
+ * Have to Extend AbstractVerticle </br>
  Kotlin 
   extending a class 
   class MyVerticle : AbstractVerticle()
