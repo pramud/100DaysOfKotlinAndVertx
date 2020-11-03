@@ -2,7 +2,7 @@
 
 # Day #1 - Setting up project
 
-gradle init </br>
+running <b>gradle init</b> in command prompt </br>
   * project type - application </br>
   * implementation language - kotlin </br>
   * split functionality across multiple sub projects - no </br>
