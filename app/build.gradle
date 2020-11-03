@@ -34,6 +34,19 @@ dependencies {
 
     // Use the Kotlin JUnit integration.
     testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
+
+    //vertx-core
+    compile "io.vertx:vertx-core:3.9.4"
+    compile "io.vertx:vertx-lang-kotlin:3.9.4"
+
+    //vertx-web
+    compile 'io.vertx:vertx-web:3.9.4'
+
+    //vertx-web api
+    annotationProcessor 'io.vertx:vertx-codegen:3.9.4:processor'
+    annotationProcessor 'io.vertx:vertx-web-api-service:3.9.4'
+    compile 'io.vertx:vertx-web-api-service:3.9.4'
+
 }
 
 application {
