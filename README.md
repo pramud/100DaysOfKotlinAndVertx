@@ -3,8 +3,8 @@
 # Day #1 - Setting up project
 
 gradle init </br>
-  $~$ project type - application </br>
-  implementation language - kotlin </br>
-  split functionality across multiple sub projects - no </br>
-  build script DSL - groovy </br>
+  * project type - application </br>
+  * implementation language - kotlin </br>
+  * split functionality across multiple sub projects - no </br>
+  * build script DSL - groovy </br>
   
