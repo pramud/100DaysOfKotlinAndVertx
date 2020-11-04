@@ -3,13 +3,21 @@
  */
 package DaysOfKotlinAndVertx
 
-class App {
-    val greeting: String
-        get() {
-            return "Hello World!"
-        }
+import io.vertx.core.AbstractVerticle
+import io.vertx.core.Vertx
+
+class App:AbstractVerticle(){
+
+    // Called when verticle is deployed
+    override fun start() {
+        print("hello")
+    }
+    // Optional - called when verticle is undeployed
+    override fun stop() {
+        print("good bye")
+    }
 }
 
 fun main(args: Array<String>) {
-    println(App().greeting)
+    Vertx.vertx().deployVerticle(App())
 }
