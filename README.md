@@ -1,5 +1,3 @@
-# 100 Days Of Kotlin And Vertx
-
 # Day #1 - Setting up project
 
 running <b>gradle init</b> in command prompt </br> and seting the values as below:
