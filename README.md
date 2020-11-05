@@ -37,3 +37,5 @@ Creating a verticle:
 # Day #3
 
 * Creating a simple HTTP Server
+
+TODO Understand the HTTP/1.0, HTTP/1.1 and HTTP/2 protocols.
