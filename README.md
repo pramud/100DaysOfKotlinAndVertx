@@ -41,3 +41,11 @@ Creating a verticle:
 TODO Understand the HTTP/1.0, HTTP/1.1 and HTTP/2 protocols, websocket framesize
 
 The default host is 0.0.0.0 which means 'listen on all available addresses' and the default port is 80.
+
+5 lines to create a simple HTTP Server
+
+    var server = Vertx.vertx().createHttpServer()
+    server.requestHandler({req ->
+        req.response().end("Hello World!")
+    })
+    server.listen()
