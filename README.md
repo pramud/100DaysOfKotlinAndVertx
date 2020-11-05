@@ -54,6 +54,6 @@ The default host is 0.0.0.0 which means 'listen on all available addresses' and 
     server.listen()
 
 
-* Serving a file 
+* Serving a file - below line serves file from resources/web folder
 
  req.response().sendFile("web/${file}")
