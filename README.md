@@ -32,6 +32,11 @@ Creating a verticle:
  2. Kotlin - extending a class 
   "class MyVerticle : AbstractVerticle()"
 
+* Serving a file 
+
+ req.response().sendFile("web/${file}")
+
+
 
 
 # Day #3
