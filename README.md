@@ -31,3 +31,9 @@ Creating a verticle:
  1. Have to Extend AbstractVerticle </br>
  2. Kotlin - extending a class 
   "class MyVerticle : AbstractVerticle()"
+
+
+
+# Day #3
+
+* Creating a simple HTTP Server
