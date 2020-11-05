@@ -33,4 +33,4 @@ Creating a verticle:
   "class MyVerticle : AbstractVerticle()"
 
 
-# Day#3
+# Day #3
