@@ -34,3 +34,5 @@ Creating a verticle:
 
 
 # Day #3
+
+* Creating a simple HTTP Server
