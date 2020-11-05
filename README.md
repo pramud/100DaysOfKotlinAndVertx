@@ -38,4 +38,4 @@ Creating a verticle:
 
 * Creating a simple HTTP Server
 
-TODO Understand the HTTP/1.0, HTTP/1.1 and HTTP/2 protocols.
+TODO Understand the HTTP/1.0, HTTP/1.1 and HTTP/2 protocols, websocket framesize
