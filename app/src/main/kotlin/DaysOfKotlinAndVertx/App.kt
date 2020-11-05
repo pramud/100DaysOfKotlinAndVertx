@@ -19,5 +19,10 @@ class App:AbstractVerticle(){
 }
 
 fun main(args: Array<String>) {
+    var server = Vertx.vertx().createHttpServer()
+    server.requestHandler({req ->
+        req.response().end("Hello World!")
+    })
+    server.listen()
     Vertx.vertx().deployVerticle(App())
 }
