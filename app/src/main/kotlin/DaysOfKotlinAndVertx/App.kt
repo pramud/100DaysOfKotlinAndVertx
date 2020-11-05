@@ -11,6 +11,11 @@ class App:AbstractVerticle(){
     // Called when verticle is deployed
     override fun start() {
         print("hello")
+        var server = vertx.createHttpServer()
+        server.requestHandler({ req ->
+            req.response().end("Hello World!")
+        })
+        server.listen()
     }
     // Optional - called when verticle is undeployed
     override fun stop() {
@@ -19,10 +24,11 @@ class App:AbstractVerticle(){
 }
 
 fun main(args: Array<String>) {
-    var server = Vertx.vertx().createHttpServer()
-    server.requestHandler({req ->
-        req.response().end("Hello World!")
-    })
-    server.listen()
+//    Using the below commented code HTTP Server is not associated with any verticle
+//    var server = Vertx.vertx().createHttpServer()
+//    server.requestHandler({req ->
+//        req.response().end("Hello World!")
+//    })
+//    server.listen()
     Vertx.vertx().deployVerticle(App())
 }
