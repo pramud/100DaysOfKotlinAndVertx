@@ -10,7 +10,7 @@ Adding vertx-core, vertx-web, vertx web api dependencies in build.gradle file
 
 
 
-# Day #2
+# Day #2 - First Verticle
 
  common pattern throughout Vert.x APIs <b> Fluent API </b> - A fluent API is where multiple methods calls can be chained together. 
  
