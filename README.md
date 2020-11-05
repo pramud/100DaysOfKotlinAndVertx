@@ -32,9 +32,7 @@ Creating a verticle:
  2. Kotlin - extending a class 
   "class MyVerticle : AbstractVerticle()"
 
-* Serving a file 
 
- req.response().sendFile("web/${file}")
 
 
 
@@ -54,3 +52,8 @@ The default host is 0.0.0.0 which means 'listen on all available addresses' and 
         req.response().end("Hello World!")
     })
     server.listen()
+
+
+* Serving a file 
+
+ req.response().sendFile("web/${file}")
