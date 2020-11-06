@@ -10,7 +10,39 @@ class App:AbstractVerticle(){
 
     // Called when verticle is deployed
     override fun start() {
-        print("hello")
+        println("hello")
+        var server = vertx.createHttpServer()
+        server.requestHandler({ req ->
+//            println("method: " +  req.method())
+//            println("version: " + req.version())
+//            println("uri: " + req.uri())
+//            println("path: " + req.path())
+//            println("query: " + req.query())
+//            println("headers: " + req.headers())
+//            println("params: " + req.params())
+//            println("remote address ${req.remoteAddress()}")
+            var file = ""
+            if (req.path() == "/") {
+                file = "index.html"
+            } else if (!req.path().contains("..")) {
+                file = req.path()
+            }
+            req.response().sendFile("web/${file}")
+//            req.response().end("Hello World!")
+
+        })
+//        The actual bind is asynchronous so the server might not actually be listening until some time after the call
+//        to listen has returned.
+//
+//        If you want to be notified when the server is actually listening you can provide a handler to the listen call.
+//        For example:
+        server.listen({res ->
+            if(res.succeeded()){
+                println("Server is now listening!")
+            }else{
+                println("failed to bind")
+            }
+        })
     }
     // Optional - called when verticle is undeployed
     override fun stop() {
@@ -19,5 +51,11 @@ class App:AbstractVerticle(){
 }
 
 fun main(args: Array<String>) {
+//    Using the below commented code HTTP Server is not associated with any verticle
+//    var server = Vertx.vertx().createHttpServer()
+//    server.requestHandler({req ->
+//        req.response().end("Hello World!")
+//    })
+//    server.listen()
     Vertx.vertx().deployVerticle(App())
 }

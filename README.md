@@ -31,3 +31,29 @@ Creating a verticle:
  1. Have to Extend AbstractVerticle </br>
  2. Kotlin - extending a class 
   "class MyVerticle : AbstractVerticle()"
+
+
+
+
+
+
+# Day #3
+
+* Creating a simple HTTP Server
+
+TODO Understand the HTTP/1.0, HTTP/1.1 and HTTP/2 protocols, websocket framesize
+
+The default host is 0.0.0.0 which means 'listen on all available addresses' and the default port is 80.
+
+5 lines to create a simple HTTP Server
+
+    var server = Vertx.vertx().createHttpServer()
+    server.requestHandler({req ->
+        req.response().end("Hello World!")
+    })
+    server.listen()
+
+
+* Serving a file - below line serves file from resources/web folder
+
+ req.response().sendFile("web/${file}")
