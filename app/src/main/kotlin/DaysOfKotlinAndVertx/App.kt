@@ -13,7 +13,23 @@ class App:AbstractVerticle(){
         println("hello")
         var server = vertx.createHttpServer()
         server.requestHandler({ req ->
-            req.response().end("Hello World!")
+//            println("method: " +  req.method())
+//            println("version: " + req.version())
+//            println("uri: " + req.uri())
+//            println("path: " + req.path())
+//            println("query: " + req.query())
+//            println("headers: " + req.headers())
+//            println("params: " + req.params())
+//            println("remote address ${req.remoteAddress()}")
+            var file = ""
+            if (req.path() == "/") {
+                file = "index.html"
+            } else if (!req.path().contains("..")) {
+                file = req.path()
+            }
+            req.response().sendFile("web/${file}")
+//            req.response().end("Hello World!")
+
         })
 //        The actual bind is asynchronous so the server might not actually be listening until some time after the call
 //        to listen has returned.
